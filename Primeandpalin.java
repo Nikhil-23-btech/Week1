@@ -1,28 +1,39 @@
 import java.util.*;
-class PrimeandPalin
-{
-public static void main(String args[])
-{
-int a,b,i,j;
-int flag=0;
-Scanner sc=new Scanner(System.in);
-System.out.println("Enter the range between which we want to find the prime number:");
-a=sc.nextInt();
-b=sc.nextInt();
-for(i=a;i<=b;i++)
- if (isPrime (i))
-        System.out.println (i);
-   }
-
-   static boolean isPrime (int n)
-   {
-    if (n < 2)
-       return false;
-     for (int i = 2; i <= Math.sqrt(n); i++)
-       {
-      if (n % i == 0)
-        return false;
-       }
-     return true;
-   }
- }
+class Primeandpalin{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        checkNumber(num);
+    }
+    public static boolean isPrime(int n){
+        if(n<=1){
+            return false;
+        }
+        for (int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isPalin(int n){
+        String str=Integer.toString(n);
+        String revstr=new StringBuilder(str).reverse().toString();
+        return str.equals(revstr);
+    }
+    public static int nextPalin(int n){
+        n++;
+        while(!isPalin(n)){
+            n++;
+        }
+        return n;
+    }
+    public static void checkNumber(int n){
+        if(!isPrime(n)){
+            System.out.println(n +"is not a prime");
+        }
+        else{
+            System.out.println(nextPalin(n));
+        }
+    }
+}
