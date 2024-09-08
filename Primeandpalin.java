@@ -36,4 +36,8 @@ class Primeandpalin{
             System.out.println(nextPalin(n));
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4e73c523f6cb9ecd4aca99e6bf5a4f712e5899e0
