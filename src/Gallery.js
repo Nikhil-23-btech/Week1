@@ -1,10 +1,10 @@
 import React from 'react';
-
+import './style.css';
 function Gallery() {
   const products = [
     { name: 'Graphic card rtx 4070', image: 'photos/graphic.jpg', price: 490 },
     { name: 'Iphone 16 pro max', image: 'photos/iphone1.jpg', price: 100 },
-    { name: 'Macbook Air M1', image: 'photos/macbook M1.webp', price: 200 },
+    { name: 'Macbook Air M1', image: 'photos/macbookM1.webp', price: 200 },
     { name: 'One plus 12R', image: 'photos/oneplus.jpg', price: 300 },
     { name: 'Western Shirts', image: 'photos/s5.jpg', price: 80 },
     { name: 'Diesel watch', image: 'photos/watch.jpg', price: 70 },

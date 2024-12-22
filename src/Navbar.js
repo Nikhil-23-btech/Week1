@@ -1,55 +1,59 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './style.css';
+
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <ul>
       <li><img src="logo.jpg" style={{ width: '40px', height: '40px' }} alt="Logo" /></li>
-      <li><a href="main.html">Home</a></li>
-      <li><a href="#news">News</a></li>
+      <li><a href="#" onClick={() => navigate('/sample')}>Home</a></li>
+      <li><a href="#" onClick={() => navigate('/news')}>News</a></li>
       <li className="dropdown">
-        <a href="javascript:void(0)" className="dropbtn">Categories</a>
+        <a href="#" className="dropbtn">Categories</a>
         <div className="dropdown-content">
-          <a href="mobile.html">Mobiles</a>
-          <a href="#">Laptops</a>
-          <a href="#">Clothing</a>
-          <a href="#">Shoes</a>
-          <a href="#">Sports</a>
+          <a href="" onClick={() => navigate('/Mobile')}>Mobiles</a>
+          <a href="" onClick={() => navigate('/laptops')}>Laptops</a>
+          <a href="" onClick={() => navigate('/clothing')}>Clothing</a>
+          <a href="" onClick={() => navigate('/shoes')}>Shoes</a>
+          <a href="" onClick={() => navigate('/sports')}>Sports</a>
         </div>
       </li>
       <li className="dropdown">
-        <a href="javascript:void(0)" className="dropbtn">Offers</a>
+        <a href="" className="dropbtn">Offers</a>
         <div className="dropdown-content">
-          <a href="#">Upto 10-20%</a>
-          <a href="#">Upto 30-50%</a>
-          <a href="#">Upto 60-90%</a>
+          <a href="" onClick={() => navigate('/upto1020')}>Upto 10-20%</a>
+          <a href="" onClick={() => navigate('/upto3050')}>Upto 30-50%</a>
+          <a href="" onClick={() => navigate('/upto7090')}>Upto 70-90%</a>
         </div>
       </li>
       <li className="dropdown">
-        <a href="javascript:void(0)" className="dropbtn">About Us</a>
+        <a href="" className="dropbtn">About Us</a>
         <div className="dropdown-content">
-          <a href="#">Feedback</a>
-          <a href="#">Report Problem</a>
+          <a href="" onClick={() => navigate('/feedback')}>Feedback</a>
+          <a href="" onClick={() => navigate('/reportproblem')}>Report Problem</a>
         </div>
       </li>
       <li className="dropdown">
-        <a href="javascript:void(0)" className="dropbtn">Help?</a>
+        <a href="" className="dropbtn">Help?</a>
         <div className="dropdown-content">
-          <a href="#">Convey Your Problem</a>
+          <a href="" onClick={() => navigate('/conveyproblem')}>Convey Your Problem</a>
         </div>
       </li>
       <li className="navbar-right dropdown">
-        <a href="javascript:void(0)" className="dropbtn"><i className="fas fa-shopping-cart"></i> Cart</a>
+        <a href="" className="dropbtn"><i className="fas fa-shopping-cart"></i> Cart</a>
         <div className="dropdown-content">
-          <a href="view.html">View Cart</a>
-          <a href="#">Checkout</a>
+          <a href="" onClick={() => navigate('/view-cart')}>View Cart</a>
+          <a href="" onClick={() => navigate('/checkout')}>Checkout</a>
         </div>
       </li>
       <li className="navbar-right dropdown">
-        <a href="javascript:void(0)" className="dropbtn">Your Profile</a>
+        <a href="" className="dropbtn">Your Profile</a>
         <div className="dropdown-content">
-          <a href="#">Account Settings</a>
-          <a href="#">Order History</a>
-          <a href="#">Logout</a>
+          <a href="" onClick={() => navigate('/account-settings')}>Account Settings</a>
+          <a href="" onClick={() => navigate('/order-history')}>Order History</a>
+          <a href="" onClick={() => navigate('/logout')}>Logout</a>
         </div>
       </li>
     </ul>

@@ -8,7 +8,7 @@ function Sample() {
     <div>
       <Navbar />
       <div className="container">
-        <img src="photos/sprts.jpeg" alt="" className="image" />
+        <img src="photos/sports.jpeg" alt="" className="image" />
         <div className="bottom-left">Bottom Left</div>
       </div>
       <hr /><hr />

@@ -1,19 +1,21 @@
-a {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    font-size: 20px;
-}
-body {
+/* Apply background image to the login page only */
+.login-page {
+    background-image: url('back1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+/* Remove background image from other elements */
+body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url(back1.jpg);
-    background-size: cover;
 }
+
+/* Styles for the login container */
 .login-container {
     width: 400px;
     padding: 20px;
@@ -23,10 +25,12 @@ body {
     color: black;
     text-align: center;
 }
+
 .login-container h2 {
     margin-bottom: 20px;
     font-size: 24px;
 }
+
 .login-container input[type="email"],
 .login-container input[type="password"] {
     width: 90%;
@@ -38,11 +42,13 @@ body {
     background-color: rgba(255, 255, 255, 0.5); 
     transition: box-shadow 0.3s ease;
 }
+
 .login-container input[type="email"]:hover,
 .login-container input[type="password"]:hover {
     box-shadow: 0 0 20px white;
     outline: none;
 }
+
 .login-container button {
     width: 100%;
     padding: 10px;
@@ -53,9 +59,11 @@ body {
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
+
 button:hover {
     box-shadow: 0 0 20px white;
 }
+
 .login-container input[type="text"] {
     width: 90%;
     padding: 10px;
